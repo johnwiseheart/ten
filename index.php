@@ -1,8 +1,8 @@
 <?php
-$numOne = $_GET['one'];
-$numTwo = $_GET['two'];
-$numThree = $_GET['three'];
-$numFour = $_GET['four'];
+$numOne = $_GET['n1'];
+$numTwo = $_GET['n2'];
+$numThree = $_GET['n3'];
+$numFour = $_GET['n4'];
 
 // equ and max_sum are global variables
 // equ is the concatenated string of 3 equations that produce 10
@@ -101,6 +101,56 @@ function determine( $values, $size = 4, $sum = 0, $equation = '' ) {
 // the results are stored in global variables because passing the result set through the recursive call is /very/ nasty
 
 determine( array( $numOne, $numTwo, $numThree, $numFour ) );
-
-print $equ . "\n";
 ?>
+
+
+<html>
+    <head>
+        <style>
+            body {
+                width: 100%;
+                height: 100%;
+            }
+            div.wrapper {
+                position:absolute; height:100%; width:100%;
+                display: table;
+            }
+            div.inner {
+                display: table-cell;
+                vertical-align: middle;
+                text-align:center;
+            }
+            input[type=text]  {
+                width: 100px;
+                height: 200px;
+                font-size: 100px; 
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="inner">
+            <?php if($equ) { ?>
+                <?php echo $equ; ?><br />
+                <a href="/index.php">Clear</a>
+                <br />
+            <?php } else { ?>
+                Enter the four digits to "make ten".
+                <br />
+            <?php } ?>
+            <br />
+            <form autocomplete="off">
+
+            <input type="text" name="n1" maxlength="1" autocomplete="off"/>
+            <input type="text" name="n2" maxlength="1" autocomplete="off"/>
+            <input type="text" name="n3" maxlength="1" autocomplete="off"/>
+            <input type="text" name="n4" maxlength="1" autocomplete="off"/>
+            <br />
+            <br />
+            <input type="submit">
+            </form>
+            </div>
+        </div>
+    </body>
+</html>
