@@ -6,6 +6,7 @@ html, body {
   background-color: #F9F6E8;
   color: #67A1AF;
   font-family: 'Patua One', cursive;
+  margin: 0;
 }
 
 .container {
@@ -19,11 +20,12 @@ html, body {
 
 .inner {
   width: 90%;
-  max-width: 1200px;
+  max-width: 600px;
 }
 
 input[type=number]  {
-  font-size: 4em;
+  font-size: 5em;
+  width: 0.3em;
   text-align:center;
   font-family: 'Patua One', cursive;
   background-color: #F2EEDA;
