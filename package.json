@@ -1,0 +1,23 @@
+{
+  "name": "ten",
+  "version": "1.0.0",
+  "description": "A tool used to calculate a way to \"make ten\" given 4 numbers.",
+  "main": "ten.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnwiseheart/ten.git"
+  },
+  "author": "John Wiseheart <johnwiseheart@gmail.com> (http://jcaw.me)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnwiseheart/ten/issues"
+  },
+  "homepage": "https://github.com/johnwiseheart/ten#readme",
+  "dependencies": {
+    "@types/jquery": "^2.0.40"
+  }
+}
